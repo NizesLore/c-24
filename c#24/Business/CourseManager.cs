@@ -19,14 +19,13 @@ public class CourseManager
         _courseDal = courseDal;
     }
 
-    public List<Course>  GetAll()
+    public List<Course> GetAll()
     {
         //business rules
 
-        CourseDal courseDal=new CourseDal();
-        return courseDal.GetAll();
-       
-        
+        return _courseDal.GetAll();
+
+
     }
 
 

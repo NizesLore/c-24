@@ -34,7 +34,7 @@ for (int i = 0; i < loans.Length; i++)
     Console.WriteLine(loans[i]);
 }
 
-CourseManager courseManager = new(new EfCourseDal());
+CourseManager courseManager = new(new DapperCourseDal());
 List<Course> courses2 = courseManager.GetAll();
 
 for (int i = 0; i < courses2.Count; i++)
