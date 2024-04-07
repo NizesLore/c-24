@@ -1,4 +1,5 @@
 ﻿using c_24.Business;
+using c_24.DataAccess.Concretes;
 using c_24.Entities;
 
 Console.WriteLine("Hello, World!");
@@ -23,22 +24,22 @@ else
 
 
 
-string[] loans = { "Kredi 1", "Kredi 2", "Kresi 3", "Kresi 4", "Kredi 5", "Kredi 6"};// db den gelecek
-//string[] loans2 = new string[6];
-//loans2[0] = "Kredi 1";
+string[] loans = { "Kredi 1", "Kredi 2", "Kresi 3", "Kresi 4", "Kredi 5", "Kredi 6" };// db den gelecek
+                                                                                      //string[] loans2 = new string[6];
+                                                                                      //loans2[0] = "Kredi 1";
 
-      //start   condition         increment      
+//start   condition         increment      
 for (int i = 0; i < loans.Length; i++)
 {
     Console.WriteLine(loans[i]);
 }
 
-CourseManager courseManager = new();
-Course[] courses2= courseManager.GetAll();
+CourseManager courseManager = new(new EfCourseDal());
+List<Course> courses2 = courseManager.GetAll();
 
-for (int i = 0; i < courses2.Length; i++)
+for (int i = 0; i < courses2.Count; i++)
 {
-    Console.WriteLine(courses2[i].Name +"/"+ courses2[i].Price);
+    Console.WriteLine(courses2[i].Name + "/" + courses2[i].Price);
 }
 
 Console.WriteLine("Kod bitti");
@@ -82,16 +83,16 @@ number2 = 50;
 Console.WriteLine(number1);
 
 //reference types--> array, class, interface...
-string[] cities1 = {"Ankara", "İstanbul", "İzmir" };
-string[] cities2 = {"Bursa", "Bolu", "Diyarbakır" };
+string[] cities1 = { "Ankara", "İstanbul", "İzmir" };
+string[] cities2 = { "Bursa", "Bolu", "Diyarbakır" };
 
 cities2 = cities1;
 cities1[0] = "Artvin";
 Console.WriteLine(cities2[0]);
 
 //POLYMORPHISM
-                              //101        102        103        104
-BaseCustomer[] customers = { customer1, customer2, customer3, customer4};
+//101        102        103        104
+BaseCustomer[] customers = { customer1, customer2, customer3, customer4 };
 
 foreach (BaseCustomer customer in customers)
 {
