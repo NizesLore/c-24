@@ -44,7 +44,7 @@ for (int i = 0; i < courses2.Length; i++)
 Console.WriteLine("Kod bitti");
 
 
-
+//Day2 INHERITANCE
 
 IndividualCustomer customer1 = new IndividualCustomer();
 customer1.Id = 1;
