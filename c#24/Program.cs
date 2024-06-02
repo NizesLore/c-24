@@ -91,7 +91,7 @@ cities1[0] = "Artvin";
 Console.WriteLine(cities2[0]);
 
 //POLYMORPHISM
-//101        102        103        104
+                              //101        102        103        104
 BaseCustomer[] customers = { customer1, customer2, customer3, customer4 };
 
 foreach (BaseCustomer customer in customers)
