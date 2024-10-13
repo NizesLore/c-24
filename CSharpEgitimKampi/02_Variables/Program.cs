@@ -162,7 +162,7 @@ namespace _02_Variables
 
             //double exam1, exam2, exam3, result;
             //Console.Write("Lütfen 1.sınav notunu giriniz: ");
-            //exam1 = double.Parse(Console.ReadLine());
+            //exam1 = double.Parse(Console.ReadLine()); 
 
             //Console.Write("Lütfen 2.sınav notunu giriniz: ");
             //exam2 = double.Parse(Console.ReadLine());
