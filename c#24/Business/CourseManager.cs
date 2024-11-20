@@ -25,7 +25,7 @@ public class CourseManager
 
         return _courseDal.GetAll();
 
-
+        //return _courseDal.GetAll();
     }
 
 
